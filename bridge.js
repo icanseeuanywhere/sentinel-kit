@@ -23,16 +23,16 @@
         /**
          * Generate .integ file
          */
-        generate(options) {
-            return core.generate(options);
+        generateIntegFile(options) {
+            return core.generateIntegFile(options);
         },
 
         /**
          * Verify integrity
          * auto-exit jika gagal (core logic)
          */
-        verify(options) {
-            return core.verify(options);
+        verifyIntegrity(options) {
+            return core.verifyIntegrity(options);
         }
     };
 
