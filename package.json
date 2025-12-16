@@ -1,0 +1,10 @@
+{
+    "name": "sentinel-kit",
+    "version": "1.0.0",
+    "main": "bridge.js",
+    "exports": {
+      "require": "./bridge.js",
+      "import": "./bridge.js"
+    },
+    "type": "commonjs"
+}
