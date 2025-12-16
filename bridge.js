@@ -14,26 +14,19 @@
     if (!core) {
         throw new Error("IntegGuard core not found");
     }
-
-    /**
-     * Public API (Bridge)
-     * Jangan expose internal core
-     */
+    
     const api = {
-        /**
-         * Generate .integ file
-         */
         generateIntegFile(options) {
             return core.generateIntegFile(options);
         },
 
-        /**
-         * Verify integrity
-         * auto-exit jika gagal (core logic)
-         */
         verifyIntegrity(options) {
             return core.verifyIntegrity(options);
-        }
+        },
+        
+        Protector(constructor){
+            return new core.Protector(constructor);
+        },
     };
 
     return api;
